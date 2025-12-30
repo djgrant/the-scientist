@@ -52,11 +52,11 @@ Note: You can [set a default model](https://opencode.ai/docs/models/#set-a-defau
 
 | Agent | Description |
 |-------|-------------|
-| `architect` | Plans architecture and major changes |
-| `critique` | Adversarial critic for generating insights through disagreement |
-| `delegate` | Orchestrates long-horizon projects via work packages and subagents |
-| `document` | Technical writer for documentation |
-| `ux` | Tests web interfaces and researches UX solutions |
+| [`architect`](agent/architect.md) | Plans architecture and major changes |
+| [`critique`](agent/critique.md) | Adversarial critic for generating insights through disagreement |
+| [`delegate`](agent/delegate.md) | Orchestrates long-horizon projects via work packages and subagents |
+| [`document`](agent/document.md) | Technical writer for documentation |
+| [`ux`](agent/ux.md) | Tests web interfaces and researches UX solutions |
 
 Note: opencode already ships with [built-in agents](https://opencode.ai/docs/agents/#built-in)↗ – plan, general, build, and explore.
 
@@ -64,28 +64,28 @@ Note: opencode already ships with [built-in agents](https://opencode.ai/docs/age
 
 | Command | Description |
 |---------|-------------|
-| `/browser-test` | Test web UI in browser with screenshots |
-| `/commit` | Create a git commit with AI-generated message |
-| `/files-to-prompt` | Generate a prompt from repo files for use with LLMs |
-| `/review-docs` | Check documentation accuracy against code |
-| `/test-and-fix` | Run tests and fix any failures |
+| [`/browser-test`](command/browser-test.md) | Test web UI in browser with screenshots |
+| [`/commit`](command/commit.md) | Create a git commit with AI-generated message |
+| [`/files-to-prompt`](command/files-to-prompt.md) | Generate a prompt from repo files for use with LLMs |
+| [`/review-docs`](command/review-docs.md) | Check documentation accuracy against code |
+| [`/test-and-fix`](command/test-and-fix.md) | Run tests and fix any failures |
 
 ### Tools
 
 | Tool | Description |
 |------|-------------|
-| `files-to-prompt` | Generate prompts from repo files using [files-to-prompt](https://github.com/simonw/files-to-prompt) |
+| [`files-to-prompt`](tool/files-to-prompt.ts) | Generate prompts from repo files using [files-to-prompt](https://github.com/simonw/files-to-prompt) |
 
 ### Skills
 
 | Skill | Description |
 |-------|-------------|
-| `browser` | Take screenshots and interact with web UIs via Playwright |
-| `read-learnings` | Review previously recorded project learnings |
-| `record-learnings` | Record notable discoveries for future reference |
-| `scientific-method` | Hypothesis-driven iteration |
-| `work-packages` | Structured approach for multi-agent task handoff |
-| `write-tests` | Guidelines for writing tests |
+| [`browser`](skill/browser/SKILL.md) | Take screenshots and interact with web UIs via Playwright |
+| [`read-learnings`](skill/read-learnings/SKILL.md) | Review previously recorded project learnings |
+| [`record-learnings`](skill/record-learnings/SKILL.md) | Record notable discoveries for future reference |
+| [`scientific-method`](skill/scientific-method/SKILL.md) | Hypothesis-driven iteration |
+| [`work-packages`](skill/work-packages/SKILL.md) | Structured approach for multi-agent task handoff |
+| [`write-tests`](skill/write-tests/SKILL.md) | Guidelines for writing tests |
 
 ### Work Packages
 
