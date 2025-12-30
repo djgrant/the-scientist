@@ -20,7 +20,7 @@ The system may also be valuable to developers who gain less enjoyment from spend
 
 The most important agent in this setup is you.
 
-A clear, well-thought-out vision is to an agent what a good data structure is to code.
+A clear, well-thought-out vision is to an LLM what a good data structure is to code.
 
 I recommend trying the following workflow:
 
