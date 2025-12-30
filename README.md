@@ -67,6 +67,7 @@ Note: opencode already ships with [built-in agents](https://opencode.ai/docs/age
 | [`/browser-test`](command/browser-test.md) | Test web UI in browser with screenshots |
 | [`/commit`](command/commit.md) | Create a git commit with AI-generated message |
 | [`/files-to-prompt`](command/files-to-prompt.md) | Generate a prompt from repo files for use with LLMs |
+| [`/init-scientist`](command/init-scientist.md) | Initialize project with opencode-scientist structure and dependencies |
 | [`/review-docs`](command/review-docs.md) | Check documentation accuracy against code |
 | [`/test-and-fix`](command/test-and-fix.md) | Run tests and fix any failures |
 
@@ -89,27 +90,33 @@ Note: opencode already ships with [built-in agents](https://opencode.ai/docs/age
 
 ### Work Packages
 
-This config includes a work package system for structured multi-agent collaboration:
+This config includes a work package system for structured multi-agent collaboration. Work packages live in your project's `.opencode/` directory:
 
 ```
-work/
-  todo/        # Pending work packages
-  in-progress/ # Currently being worked on
-  completed/   # Finished work packages
+.opencode/
+  work/
+    todo/        # Pending work packages
+    in-progress/ # Currently being worked on
+    completed/   # Finished work packages
 ```
 
 Work packages are markdown files that define a problem, scope, approach, and track results across multiple agent sessions.
 
+Run `/init-scientist` in your project to set up this structure.
+
 ### Learnings
 
-Agents can record project-specific discoveries in `learnings/`:
+Agents can record project-specific discoveries in `.opencode/learnings/`:
 
 ```
-learnings/
-  2025-01-15-(package:api)-(auth flow)-(tags:security,oauth).md
+.opencode/
+  learnings/
+    2025-01-15-(package:api)-(auth flow)-(tags:security,oauth).md
 ```
 
 These are loaded by the `read-learnings` skill to provide context to agents.
+
+Run `/init-scientist` in your project to set up this structure.
 
 
 ## Setup
@@ -150,21 +157,11 @@ You can override any of these settings in a project's `.opencode/` directory. Op
 2. `OPENCODE_CONFIG_DIR` (if set)
 3. Project config (`.opencode/`)
 
-## Global Dependencies
+## Project Setup
 
-### Playwright
+Run `/init-scientist` in your project to:
 
-The browser skill requires Playwright:
-
-```bash
-pip install playwright
-playwright install chromium
-```
-
-### files-to-prompt
-
-The `/files-to-prompt` command requires [files-to-prompt](https://github.com/simonw/files-to-prompt):
-
-```bash
-pip install files-to-prompt
-```
+- Create the `.opencode/work/` directory structure for work packages
+- Create the `.opencode/learnings/` directory for project learnings
+- Install required dependencies (Playwright, files-to-prompt)
+- Optionally create an AGENTS.md template

@@ -13,3 +13,7 @@ yarn.lock
 
 # OS files
 .DS_Store
+
+# Project-specific directories (should live in project's .opencode/)
+work/
+learnings/
