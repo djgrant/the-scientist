@@ -26,7 +26,7 @@ Create a work package, and within it track the iterations:
 {What you are trying to achieve}
 
 ## Current Hypothesis
-{What you think is happening and what you prediction will fix it}
+{What you think is happening and what you predict will fix it}
 
 ## Iterations
 
