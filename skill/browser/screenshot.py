@@ -54,7 +54,7 @@ import signal
 from pathlib import Path
 
 # Configuration
-SCREENSHOTS_DIR = Path(__file__).parent.parent.parent / ".screenshots"
+SCREENSHOTS_DIR = Path.cwd() / ".screenshots"
 SOCKET_PATH = SCREENSHOTS_DIR / "browser.sock"
 PID_FILE = SCREENSHOTS_DIR / "browser.pid"
 DEFAULT_URL = os.environ.get("BROWSER_URL", "http://localhost:5173")

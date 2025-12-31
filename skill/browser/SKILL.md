@@ -45,4 +45,4 @@ python .opencode/skill/browser/screenshot.py <command> [args]
 
 ## Screenshots
 
-Saved to `.opencode/.screenshots/screenshot.png`. Read this file to see the visual state.
+Saved to `.screenshots/screenshot.png` in the current working directory. Read this file to see the visual state.
