@@ -1,15 +1,22 @@
 # opencode-scientist
 
 
-An extensible [OpenCode](https://opencode.ai)<sup>↗</sup> settings pack with custom agents, work packages, commands, and skills.
+An [OpenCode](https://opencode.ai)<sup>↗</sup> settings pack with custom agents, work packages, commands, and skills.
 
 Designed to help agents self-steer using feedback loops and a hypothesis-driven iteration cycle. 
 
 Excels at operating long-horizon, multi-task projects. 
 
-<br />
+## Quick Start
+
+```bash
+$ opencode
+→ Help me set up https://github.com/djgrant/opencode-scientist
+```
 
 [Features](#features)<sup>↓</sup> • [Installation](#installation)<sup>↓</sup> • [User Guide](#user-guide)<sup>↓</sup>
+
+<br />
 
 # Features
 
