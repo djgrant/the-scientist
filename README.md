@@ -55,6 +55,7 @@ Slash commands for common workflows.
 | [`/commit`](command/commit.md) | Create a git commit with AI-generated message |
 | [`/files-to-prompt`](command/files-to-prompt.md) | Generate a prompt from repo files for use with LLMs |
 | [`/init-scientist`](command/init-scientist.md) | Initialise project with the-scientist structure and dependencies |
+| [`/update-scientist`](command/update-scientist.md) | Update the-scientist to the latest version |
 | [`/review-docs`](command/review-docs.md) | Check documentation accuracy against code |
 | [`/test-and-fix`](command/test-and-fix.md) | Run tests and fix any failures |
 
@@ -126,6 +127,25 @@ Run `/init-scientist` within your repo. This will set up:
 - `.opencode/learnings/` for project learnings
 - Playwright and files-to-prompt CLI tools
 - Optionally, an AGENTS.md template
+
+## Updating
+
+To update the-scientist to the latest version, you have two options:
+
+**1/ Run update command**
+
+```
+/update-scientist
+```
+
+The command will instruct the agent to merge any local changes and check for new prerequisites.
+
+**2/ Pull Manually**
+
+```bash
+cd {path-to-the-scientist}
+git pull
+```
 
 <br />
 
