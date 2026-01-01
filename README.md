@@ -58,12 +58,9 @@ Slash commands for common workflows.
 | Command | Description |
 |---------|-------------|
 | [`/browser-test`](command/browser-test.md) | Test web UI in browser with screenshots |
-| [`/commit`](command/commit.md) | Create a git commit with AI-generated message |
 | [`/files-to-prompt`](command/files-to-prompt.md) | Generate a prompt from repo files for use with other AI tools |
 | [`/init-scientist`](command/init-scientist.md) | Initialise project with the-scientist structure and dependencies |
 | [`/update-scientist`](command/update-scientist.md) | Update the-scientist to the latest version |
-| [`/review-docs`](command/review-docs.md) | Check documentation accuracy against code |
-| [`/test-and-fix`](command/test-and-fix.md) | Run tests and fix any failures |
 
 ### Skills
 
@@ -77,16 +74,6 @@ Lazily-loaded instructions that guide agent behavior.
 | [`record-learnings`](skill/record-learnings/SKILL.md) | Record notable discoveries for future reference |
 | [`scientific-method`](skill/scientific-method/SKILL.md) | Hypothesis-driven iteration |
 | [`work-packages`](skill/work-packages/SKILL.md) | Structured approach for multi-agent task handoff |
-| [`write-tests`](skill/write-tests/SKILL.md) | Guidelines for writing tests |
-
-### Storage
-
-Persistent state stored in a project's `.opencode/` directory.
-
-| Concept | Purpose |
-|---------|---------|
-| Work packages | Documents defining a goal, hypothesis and results; tracked across sessions |
-| Learnings | Notable discoveries that provide context to future agent sessions |
 
 ### Tools
 
