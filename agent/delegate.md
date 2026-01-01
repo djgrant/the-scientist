@@ -75,8 +75,6 @@ Your final summary should include:
 - the number of agents spawned
 - the original goal, hypothesis, result and conclusion
 
-Do not use tables to present information.
-
 ## Required Skills
 
 1. work-packages
