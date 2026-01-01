@@ -137,25 +137,39 @@ A clear, well-thought-out vision is to an LLM what a good data structure is to c
 
 ## Approach
 
-I suggest starting with the following workflow:
+Here are a couple of suggestions you can try as a starting point.
+
+
+### Existing Projects 
+
+Prompt the delegate agent to:
+
+```
+Commission thorough research looking for gaps and opportunities in this project. Explore a wide range of areas and ideas. 
+```
+
+### New Projects/Features
+
+Try this workflow:
 
 1. Start opencode in *plan* mode and explain your vision to the agent
-2. Feel free to leave some questions open-ended at this stage (exploration can be delegated to subagents)
+2. Leave some questions open (exploration can be delegated to subagents)
 3. Once the vision is well-formed ask the *plan* agent to create a *"scoping work package"* to capture the vision and areas to explore 
 4. Compact the conversation (/compact)
-5. Switch to *delegate* mode (tab key), then ask the agent to *"read the work package and execute the vision"*
+5. Switch to *delegate* mode (tab key), then ask the agent to "read the work package and execute the vision"*
 
 The *delegate* agent will then use subagents to create more detailed work packages, which, in turn, get delegated to other subagents to implement.
 
 ## Use Cases
 
-I have so far found this setup very valuable for:
-1. Personal applications e.g. holiday planner, home automation etc.
-2. Feasibilty experiments e.g. building large features to generate insights
-
-Beyond those, whether you decide to ship the code this system produces, or use it as the inspiration for a more-considered build, will depend on entirely on your context and risk tolerance.
+I have so far found this setup valuable for:
+1. Deep-dives e.g find performance/security/ux gaps and opportunities
+2. Feasibilty experiments e.g. build out a features to generate insights
+3. Personal applications e.g. holiday planner, home automation etc.
 
 This system may also be valuable to developers who gain less enjoyment from manually hand-holding agents. Once a long-running project gets started, you get a reasonably long interval to divert your attention toward more focussed tasks.
+
+Whether you decide to ship the code this system produces, or use it as the inspiration for a more-considered build, will depend on entirely on your context and risk tolerance.
 
 ## Operating Costs
 
@@ -165,7 +179,7 @@ It is therefore recommended to be on subscription pricing e.g. Claude Code, Gith
 
 ## Recommended Models
 
-I am personally using this with Opus 4.5. No doubt, Gemini 3, GPT 5.2 and other SOTA-class models will work similarly well.  
+I am personally using this with Opus 4.5. No doubt, Gemini 3, GPT 5.2 and other SOTA-class models will work similarly well. Mixing models, will probably boost peformance. 
 
 I strongly suspect that the system will break down with a model like Sonnet 4.5, and will be no more cost effective.
 
