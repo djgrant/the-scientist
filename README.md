@@ -38,8 +38,10 @@ Specialized agents for different task types.
 | [`architect`](agent/architect.md) | Plans architecture and major changes |
 | [`critique`](agent/critique.md) | Adversarial critic for generating insights through disagreement |
 | [`delegate`](agent/delegate.md) | Orchestrates long-horizon projects via work packages and subagents |
+| [`diverge`](agent/diverge.md) | Thinks outside the box to find new directions or alternative solutions |
 | [`document`](agent/document.md) | Technical writer for documentation |
-| [`ux`](agent/ux.md) | Tests web interfaces and researches UX solutions |
+| [`qa`](agent/qa.md) | End-to-end testing using a browser |
+| [`ux`](agent/ux.md) | Researches UX solutions |
 
 Note: OpenCode already ships with [built-in agents](https://opencode.ai/docs/agents/#built-in)<sup>↗</sup> – plan, general, build, and explore.
 
@@ -63,6 +65,7 @@ Lazily loaded instructions that guide agent behavior.
 | Skill | Description |
 |-------|-------------|
 | [`browser`](skill/browser/SKILL.md) | Take screenshots and interact with web UIs via Playwright |
+| [`divergent-thinking`](skill/divergent-thinking/SKILL.md) | Expand thinking to the edges of the distribution |
 | [`read-learnings`](skill/read-learnings/SKILL.md) | Review previously recorded project learnings |
 | [`record-learnings`](skill/record-learnings/SKILL.md) | Record notable discoveries for future reference |
 | [`scientific-method`](skill/scientific-method/SKILL.md) | Hypothesis-driven iteration |
