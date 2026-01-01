@@ -6,11 +6,9 @@ THE
 SCIENTIST
 </h1>
 
-An [OpenCode](https://opencode.ai)<sup>↗</sup> settings pack with custom agents, work packages, commands, and skills.
+An [OpenCode](https://opencode.ai)<sup>↗</sup> config pack designed for operating long-horizon, multi-task projects.
 
-Designed to help agents self-steer using feedback loops and a hypothesis-driven iteration cycle. 
-
-Excels at operating long-horizon, multi-task projects. 
+Models like Opus 4.5 are great for creative work in short back-and-forths; GPT-5.2 excels when left to complete more narrowly-scoped problems. This methodology aims to support the execution of long-running and open-ended projects by using simple mechanisms that resist LLMs' post-training impulses.
 
 ## Quick Start
 
@@ -29,22 +27,29 @@ $ opencode
 
 # Features
 
-### Agents
+A baseline set of features are included. These can be used alongside any project and global configs you have already defined. See [merging configs](https://opencode.ai/docs/config/#locations)<sup>↗</sup> and  [installation](#installation)<sup>↓</sup>.
 
-Specialized agents for different task types.
+
+### Primary Agents
+
+Agents that you interact with directly.
 
 | Agent | Description |
 |-------|-------------|
-| [`architect`](agent/architect.md) | Plans architecture and major changes |
-| [`critique`](agent/critique.md) | Adversarial critic for generating insights through disagreement |
 | [`delegate`](agent/delegate.md) | Orchestrates long-horizon projects via work packages and subagents |
-| [`distill`](agent/distill.md) | Distills information by interviewing the user to extract core insights |
-| [`diverge`](agent/diverge.md) | Thinks outside the box to find new directions or alternative solutions |
-| [`document`](agent/document.md) | Technical writer for documentation |
-| [`qa`](agent/qa.md) | End-to-end testing using a browser |
-| [`ux`](agent/ux.md) | Researches UX solutions |
+| [`distill`](agent/distill.md) | Distills analysis by interviewing the user to extract core insights |
 
-Note: OpenCode already ships with [built-in agents](https://opencode.ai/docs/agents/#built-in)<sup>↗</sup> – plan, general, build, and explore.
+### Sub-Agents
+
+Agents that receive delegated tasks.
+
+| Sub-Agent | Description |
+|-----------|-------------|
+| [`architect`](agent/architect.md) | Attempts to keep project entropy low |
+| [`critique`](agent/critique.md) | Generates insights through adversarial dialectic |
+| [`diverge`](agent/diverge.md) | Looks for edge-of-distribution alternatives |
+| [`qa`](agent/qa.md) | Performs end-to-end testing to validate/invalidate hypotheses |
+| [`ux`](agent/ux.md) | Explores solution with a human-centric perspective |
 
 ### Commands
 
@@ -54,7 +59,7 @@ Slash commands for common workflows.
 |---------|-------------|
 | [`/browser-test`](command/browser-test.md) | Test web UI in browser with screenshots |
 | [`/commit`](command/commit.md) | Create a git commit with AI-generated message |
-| [`/files-to-prompt`](command/files-to-prompt.md) | Generate a prompt from repo files for use with LLMs |
+| [`/files-to-prompt`](command/files-to-prompt.md) | Generate a prompt from repo files for use with other AI tools |
 | [`/init-scientist`](command/init-scientist.md) | Initialise project with the-scientist structure and dependencies |
 | [`/update-scientist`](command/update-scientist.md) | Update the-scientist to the latest version |
 | [`/review-docs`](command/review-docs.md) | Check documentation accuracy against code |
@@ -62,12 +67,12 @@ Slash commands for common workflows.
 
 ### Skills
 
-Lazily loaded instructions that guide agent behavior.
+Lazily-loaded instructions that guide agent behavior.
 
 | Skill | Description |
 |-------|-------------|
 | [`browser`](skill/browser/SKILL.md) | Take screenshots and interact with web UIs via Playwright |
-| [`divergent-thinking`](skill/divergent-thinking/SKILL.md) | Expand thinking to the edges of the distribution |
+| [`divergent-thinking`](skill/divergent-thinking/SKILL.md) | Use verbalised sampling to mitigate mode collapse |
 | [`read-learnings`](skill/read-learnings/SKILL.md) | Review previously recorded project learnings |
 | [`record-learnings`](skill/record-learnings/SKILL.md) | Record notable discoveries for future reference |
 | [`scientific-method`](skill/scientific-method/SKILL.md) | Hypothesis-driven iteration |
@@ -166,31 +171,38 @@ Here are a couple of suggestions you can try as a starting point.
 Prompt the delegate agent to:
 
 ```
-Commission thorough research looking for gaps and opportunities in this project. Explore a wide range of areas and ideas. 
+Commission thorough research looking for gaps and opportunities in this project. 
+Explore a broad range of areas and ideas. 
 ```
+
+The delegate agent, using a selection of skills and agents, will ultimately produce an undoubtedly large set of recommendations.
+
+To find the gems in the ruff, switch to the distill agent, and let it prompt you to find out what's worth pursuing. 
+
+You can then switch back to the delegate agent and ask it to undertake the work.
 
 ### New Projects/Features
 
-Try this workflow:
+For new projects, you can switch the flow around:
 
-1. Start opencode in *plan* mode and explain your vision to the agent
+1. Start opencode in plan mode and explain your vision to the agent
 2. Leave some questions open (exploration can be delegated to subagents)
-3. Once the vision is well-formed ask the *plan* agent to create a *"scoping work package"* to capture the vision and areas to explore 
+3. Once the vision is well-formed ask the plan agent to create a *"scoping work package"* to capture the vision and areas to explore 
 4. Compact the conversation (/compact)
-5. Switch to *delegate* mode (tab key), then ask the agent to "read the work package and execute the vision"*
+5. Switch to delegate mode (tab key), then ask the agent to "read the work package and execute the vision"
 
-The *delegate* agent will then use subagents to create more detailed work packages, which, in turn, get delegated to other subagents to implement.
+The delegate agent will then use subagents to create more detailed work packages, which, in turn, get delegated to other subagents to implement.
 
 ## Use Cases
 
 I have so far found this setup valuable for:
 1. Deep-dives e.g find performance/security/ux gaps and opportunities
-2. Feasibilty experiments e.g. build out a features to generate insights
+2. Feasibility experiments e.g. build out features to generate insights
 3. Personal applications e.g. holiday planner, home automation etc.
 
 This system may also be valuable to developers who gain less enjoyment from manually hand-holding agents. Once a long-running project gets started, you get a reasonably long interval to divert your attention toward more focussed tasks.
 
-Whether you decide to ship the code this system produces, or use it as the inspiration for a more-considered build, will depend on entirely on your context and risk tolerance.
+Whether you decide to ship the code this system produces, or use it as the inspiration for a more-considered build, will depend entirely on your context and risk tolerance.
 
 ## Operating Costs
 
@@ -200,14 +212,18 @@ It is therefore recommended to be on subscription pricing e.g. Claude Code, Gith
 
 ## Recommended Models
 
-I am personally using this with Opus 4.5. No doubt, Gemini 3, GPT 5.2 and other SOTA-class models will work similarly well. Mixing models, will probably boost peformance. 
+I am personally using this with Opus 4.5. No doubt, Gemini 3, GPT 5.2 and other SOTA-class models will work similarly well. Mixing models will probably boost performance. 
 
 I strongly suspect that the system will break down with a model like Sonnet 4.5, and will be no more cost effective.
 
 Note: You can [set a default model](https://opencode.ai/docs/models/#set-a-default)<sup>↗</sup> in your global or project opencode configuration.
 
+## Additional Setup
+
+It is recommended to add a vision statement to your project's AGENTS.md (agents are instructed to align to this), along with any definitions of what good looks like to you.
+
 <br />
 
 # License
 
-MIT License - Copyright (c) 2025 Daniel Grant
+MIT License - Copyright (c) 2026 [Daniel Grant](https://danielgrant.co/)
