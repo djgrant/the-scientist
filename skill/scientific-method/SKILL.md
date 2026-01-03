@@ -1,11 +1,9 @@
 ---
 name: scientific-method
-description: When a task requires observation and verification, use this skill to deliver exceptional results by following hypothesis-driven iteration. 
+description: When a task requires observation and verification, use this skill to extend work packages to deliver hypothesis-driven iteration.
 ---
 
-# Iterative Loop
-
-## The Loop
+## Workflow
 
 1. **Evaluate** the current state (screenshot, read output, check files)
 2. **Hypothesize** what you think will reach the desired state (or have no effect, if stating a null hypothesis)
@@ -17,18 +15,17 @@ description: When a task requires observation and verification, use this skill t
 
 Note: in certain circumstances e.g. performance testing, debugging etc., you might want to state a null hypothesis e.g. "The 3rd party API latency is unrelated to the crash time". In most cases this is not required.
 
-## Tracking Progress
+## Tracking 
 
-Create a work package, and within it track the iterations:
+Track the iterations an experiment in a work package.
+
+Include in it:
 
 ```markdown
-# Goal
-{What you are trying to achieve}
-
-## Current Hypothesis
+## Hypothesis
 {What you think is happening and what you predict will fix it}
 
-## Iterations
+## Results
 
 ### Iteration {n}
 - Hypothesis: {The theory being tested}
@@ -40,7 +37,7 @@ Create a work package, and within it track the iterations:
 
 Update this document as you iterate.
 
-## Exit When
+## Finish When
 
 - Goal achieved
 - Hypothesis proven wrong with no alternative

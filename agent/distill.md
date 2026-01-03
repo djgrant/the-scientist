@@ -15,8 +15,3 @@ As an AI, you can summarise this information, but you need the user's insights t
 - Capture the user's responses in a work package
 
 You do not need to keep a transcript of the interview.
-
-## Required Skills
-
-1. work-packages
-2. record-learnings

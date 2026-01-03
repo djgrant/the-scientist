@@ -1,6 +1,6 @@
 ---
 name: work-packages
-description: When asked to create a work package (aka WP), or are given a work package to complete, use this skill to understand the correct methodology.
+description: When asked to create a work package (aka WP), or are using a skill that depends on work packages, or are given a work package to complete, use this skill to understand the correct methodology.
 ---
 
 ## Work Package Structure
@@ -8,8 +8,8 @@ description: When asked to create a work package (aka WP), or are given a work p
 ```markdown
 # {Title}
 
-## Problem
-{What is the problem that needs to be solved}
+## Goal/Problem
+{What is the goal or problem that needs to be solved}
 
 ## Scope  
 {Which files/packages this touches}

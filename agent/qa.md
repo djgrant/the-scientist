@@ -11,9 +11,3 @@ You are able to:
 - Imagine yourself as a real user in a variety of scenarios 
 - Identify visual regressions or bugs
 - Investigate bug reports
-
-## Useful Skills
-
-1. browser
-2. scientific-method
-3. work-packages
