@@ -59,7 +59,7 @@ Slash commands for common workflows.
 |---------|-------------|
 | [`/browser-test`](command/browser-test.md) | Test web UI in browser with screenshots |
 | [`/files-to-prompt`](command/files-to-prompt.md) | Generate a prompt from repo files for use with other AI tools |
-| [`/init-scientist`](command/init-scientist.md) | Initialise project with the-scientist structure and dependencies |
+| [`/init-scientist`](command/init-scientist.md) | Initialise project with the-scientist directory structure |
 | [`/update-scientist`](command/update-scientist.md) | Update the-scientist to the latest version |
 
 ### Skills
@@ -70,9 +70,13 @@ Lazily-loaded instructions that guide agent behavior.
 |-------|-------------|
 | [`browser`](skill/browser/SKILL.md) | Take screenshots and interact with web UIs via Playwright |
 | [`divergent-thinking`](skill/divergent-thinking/SKILL.md) | Use verbalised sampling to mitigate mode collapse |
+| [`orchestrate`](skill/orchestrate/SKILL.md) | Core methodology for orchestration using sub-agents and work packages |
+| [`orchestrate-map-reduce`](skill/orchestrate-map-reduce/SKILL.md) | Fan out to multiple agents, validate solutions, find a winner |
+| [`orchestrate-project`](skill/orchestrate-project/SKILL.md) | Define, execute, review, test, and iterate on sub-tasks |
 | [`read-learnings`](skill/read-learnings/SKILL.md) | Review previously recorded project learnings |
 | [`record-learnings`](skill/record-learnings/SKILL.md) | Record notable discoveries for future reference |
 | [`scientific-method`](skill/scientific-method/SKILL.md) | Hypothesis-driven iteration |
+| [`simplify`](skill/simplify/SKILL.md) | Find the essence of a solution via iterative simplification |
 | [`work-packages`](skill/work-packages/SKILL.md) | Structured approach for multi-agent task handoff |
 
 ### Tools
@@ -116,8 +120,9 @@ Run `/init-scientist` within your repo. This will set up:
 
 - `.opencode/work/` for work packages
 - `.opencode/learnings/` for project learnings
-- Playwright and files-to-prompt CLI tools
 - Optionally, an AGENTS.md template
+
+For tools that require Python dependencies (browser, files-to-prompt), run `/init-agentkit` from your global agentkit config.
 
 ## Updating
 
