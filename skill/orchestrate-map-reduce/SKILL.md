@@ -5,8 +5,8 @@ description: When you need multiple operations to get one solution, use this orc
 
 ## Types
 
-$Task = any task that an agent can execute (can be a set of instruction, tool call or something else)
-$Strategy = accumulate or independent execution (default: accumulate)
+$Task: any task that an agent can execute (can be a set of instruction, tool call or something else)
+$Strategy: accumulate or independent execution (default: accumulate)
 
 ## Input
 
@@ -41,7 +41,7 @@ Validator: {$validator}
 
 ## Context 
 
-- $SolutionPath = $n => `{~~relevant wp path}-candidate-{$n}.md`
+- $SolutionPath = $n => `/relevant wp path/-candidate-{$n}.md`
 - $current: $FilePath = $SolutionPath(0)
 - $next: $FilePath = $SolutionPath(1)
 
