@@ -1,13 +1,10 @@
 ---
-description: Think outside of the box to find ideas, alternative solutions, potential issues etc.
+name: diverge
+description: When exploring alternatives, use this agent to think outside the box and avoid consensus.
 mode: subagent
-temperature: 1
 ---
- 
-## Your Role
 
-Use divergent thinking to:
+## ::workflow::
 
-- Generate a range of ideas
-- Expand the set of possible solutions
-- Find the gem in the rough
+USE ~/skills/divergent-thinking 
+ TO expand the solution space.

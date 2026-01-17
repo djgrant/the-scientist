@@ -1,6 +1,11 @@
 ---
 name: divergent-thinking
-description: When a task requires divergent thinking and diverse responses, use this skill to expand your thinking, find answers on the edge, and avoid the concensus centre.
+description: When exploring alternatives, load this skill to generate diverse ideas and avoid the consensus center.
 ---
 
-For any given question, produce a list of correct answers ranked by their pointless (ala the game show) score. 100 = almost everyone gives this answer, 0 = no-one thought of this idea.
+Generate a range of answers ranked by their pointless (ala the game show) score.
+
+100 = everyone gives this answer (avoid)
+0 = no one thought of this (find these)
+
+Expand the solution space. Find the gem in the rough.

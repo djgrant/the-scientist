@@ -1,46 +1,64 @@
 ---
 name: work-packages
-description: When asked to create a work package (aka WP), or are using a skill that depends on work packages, or are given a work package to complete, use this skill to understand the correct methodology.
+description: When creating or working on a work package (WP), load this skill to get templates and understand the WP lifecycle.
 ---
 
-## Work Package Structure
+Work packages persist project/task state between agent sessions.
 
-```markdown
+Work packages can either by for the entire project (#master-work-package-template), or a scoped task (#scoped-work-package-template).
+
+## Work Package Lifecycle
+
+1. create in .opencode/work/drafts/wp-{name}.md
+2. move to /in-progress when starting
+3. record results
+4. iterate until 
+5. move to /completed when done
+
+## Master Work Package Template
+
+```md
 # {Title}
 
-## Goal/Problem
-{What is the goal or problem that needs to be solved}
-
-## Scope  
-{Which files/packages this touches}
-
-## Approach
-{How to do it}
+## Goal
+{What needs to be solved}
 
 ## Hypothesis
-{How and why do you think this will work}
+{Why you think this will work (or not work)}
+
+## Validation
+{How you will measure and test the results}
 
 ## Results
-{To be filled out upon completion. Can contain multiple iterations.}
+To be filled out upon completion. Can contain multiple iterations.
 
 ## Evaluation
-{What did your learn from the results? Was the hypothesis proved correct?}
+What did your learn from the results? Was the hypothesis proved correct?
 ```
 
-## Lifecycle
+## Scoped Work Package Template
 
-Work packages enable large tasks to be handled my multiple agents. The state of the task is persisted between agent session. As such, each stage of the work package does not necessarily need to be handled by a single agent.
+```md
+# {Title}
 
-1. **Create** the work package in `.opencode/work/todo/wp-{date}-{name}.md`
-2. **Read** the document to understand the task
-3. **Move** from `todo/` to `in-progress/`
-4. **Act** on the work package within scope defined in the package
-5. **Record** results/findings in the Output section 
-6. **Report** the status of the work package to the delegator
+## Goal
+{What needs to be solved}
 
-The delegator of the work package may then ask you to:
-- Move the work package to `completed/`
-- Revise the hypothesis and run another iteration
-- Commit your changes
+## Scope
+{What is in or out of scope; what will be affected}
 
-If you are not sure how to proceed, yield control back to the delegator.
+## Hypothesis
+{Why you think this will work (or not work)}
+
+## Approach
+{How you intend to achieve the goal}
+
+## Validation 
+{How you will measure and test the results}
+
+## Results
+To be filled out upon completion. Can contain multiple iterations.
+
+## Evaluation
+What did your learn from the results? Was the hypothesis proved correct?
+```

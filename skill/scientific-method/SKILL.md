@@ -1,44 +1,28 @@
 ---
 name: scientific-method
-description: When a task requires observation and verification, use this skill to extend work packages to deliver hypothesis-driven iteration.
+description: When a task would benefit from hypothesis-driven iteration, load this skill to observe, predict, and verify.
 ---
 
-## Workflow
+## ::workflow::
 
-1. **Evaluate** the current state (screenshot, read output, check files)
-2. **Hypothesize** what you think will reach the desired state (or have no effect, if stating a null hypothesis)
-3. **Predict** what will be the effect of your intervention (if any)
-3. **Act** by implementing your proposed solution
-4. **Observe** the impact of the intervention
-5. **Verify** if the hypothesis was correct
-5. **Repeat** until goal achieved
+DO
+  1. evaluate current state
+  2. hypothesize what will fix it
+  3. predict the expected result
+  4. act on your hypothesis
+  5. observe the actual result
+  6. repeat until goal achieved
+END
 
-Note: in certain circumstances e.g. performance testing, debugging etc., you might want to state a null hypothesis e.g. "The 3rd party API latency is unrelated to the crash time". In most cases this is not required.
+## Tracking Template
 
-## Tracking 
-
-Track the iterations an experiment in a work package.
-
-Include in it:
+Record each iteration in a work package:
 
 ```markdown
-## Hypothesis
-{What you think is happening and what you predict will fix it}
-
-## Results
-
 ### Iteration {n}
-- Hypothesis: {The theory being tested}
-- Action: {The specific step taken}
-- Prediction: {The expected observable result if the hypothesis is true}
-- Observed: {The actual result}
-- Conclusion: {Validated or falsified? What is the next step?}
+Hypothesis: {theory}
+Action: {what you did}
+Prediction: {expected result}
+Observed: {actual result}
+Conclusion: {validated or falsified}
 ```
-
-Update this document as you iterate.
-
-## Finish When
-
-- Goal achieved
-- Hypothesis proven wrong with no alternative
-- Diminishing returns
